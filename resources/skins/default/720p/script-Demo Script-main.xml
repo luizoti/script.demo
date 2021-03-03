@@ -1,40 +1,64 @@
 ﻿<window id="129">
-    <defaultcontrol always="false">3000</defaultcontrol>
+    <defaultcontrol always="false">10</defaultcontrol>
     <coordinates>
         <system>1</system>
-        <posx>640</posx>
-        <posy>360</posy>
+        <posx>100</posx>
+        <posy>50</posy>
     </coordinates>
     <controls>
         <control type="image">
-            <description>Black Background</description>
-            <posx>-300</posx>
-            <posy>-200</posy>
-            <width>600</width>
-            <height>400</height>
+            <description>Background</description>
+            <posx>0</posx>
+            <posy>0</posy>            
+            <width>900</width>
+            <height>500</height>
             <texture>black.png</texture>
-            <ondown>3000</ondown>
-            <onup>3000</onup>
-            <onleft>3000</onleft>
-            <onright>3000</onright>
+            <ondown>10</ondown>
+            <onup>10</onup>
+            <onleft>10</onleft>
+            <onright>10</onright>
         </control>
-        <control type="button" id="3000">
-            <description>Action Button</description>
-            <posx>-180</posx>
-            <posy>120</posy>
+        <control type="button" id="10">
+            <description>Update Library</description>
+            <textcolor>white</textcolor>
+            <posx>740</posx>
+            <posy>200</posy>
             <width>140</width>
             <height>60</height>
             <textoffsetx>12</textoffsetx>
             <align>center</align>
             <aligny>center</aligny>
+            <onclick></onclick>
+            <label>Update</label>
             <texturenofocus>keyboard-btn-backspace.png</texturenofocus>
             <texturefocus>keyboard-btn-backspace-focus.png</texturefocus>
-            <onright>3001</onright>
+            <onup>30</onup>
+            <ondown>20</ondown>
         </control>
-        <control type="button" id="3001">
+        <control type="button" id="20">
+            <description>Clear Library</description>
+            <textcolor>white</textcolor>
+            <posx>740</posx>
+            <posy>300</posy>
+            <width>140</width>
+            <height>60</height>
+            <textoffsetx>12</textoffsetx>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>Clear</label>
+            <onclick>Skin.ToggleSetting(disable_label)</onclick>
+            <texturenofocus>keyboard-btn-backspace.png</texturenofocus>
+            <texturefocus>keyboard-btn-backspace-focus.png</texturefocus>
+            <onup>10</onup>
+            <ondown>30</ondown>
+        </control>
+        <control type="button" id="30">
             <description>Exit Button</description>
-            <posx>80</posx>
-            <posy>120</posy>
+            <onclick></onclick>
+            <textcolor>white</textcolor>
+            <label>Exit</label>
+            <posx>740</posx>
+            <posy>420</posy>
             <width>140</width>
             <height>60</height>
             <textoffsetx>12</textoffsetx>
@@ -42,26 +66,27 @@
             <aligny>center</aligny>
             <texturenofocus>keyboard-btn-backspace.png</texturenofocus>
             <texturefocus>keyboard-btn-backspace-focus.png</texturefocus>
-            <onleft>3000</onleft>
+            <onup>20</onup>
+            <ondown>10</ondown>
         </control>
-        <control type="radiobutton" id="3200">
-            <description>Radiobutton with no labeltag</description>
-            <posx>-150</posx>
-            <posy>-80</posy>
-            <width>300</width>
-            <height>30</height>
-            <font>font14</font>
-            <textcolor>FFFFFFFF</textcolor>
-        </control>
-        <control type="radiobutton" id="3201">
-            <description>Radiobutton with empty labeltag</description>
-            <posx>-150</posx>
-            <posy>-50</posy>
-            <width>300</width>
-            <height>30</height>
-            <font>font14</font>
-            <textcolor>FFFFFFFF</textcolor>
-            <label></label>
+        <control type="label" id="40">
+                <description>My First label</description>
+                <left>80</left>
+                <top>60</top>
+                <width>250</width>
+                <visible>!Skin.HasSetting(disable_label)</visible>
+                <align>center</align>
+                <aligny>center</aligny>
+                <scroll>false</scroll>
+                <label>"Teste"</label>
+                <angle>30</angle>
+                <haspath>false</haspath>
+                <font>font14</font>
+                <textcolor>FFB2D4F5</textcolor>
+                <shadowcolor>ff000000</shadowcolor>
+                <wrapmultiline>false</wrapmultiline>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
         </control>
     </controls>
 </window>

@@ -1,5 +1,6 @@
+''' Default module '''
 import sys
-import xbmcaddon
+import xbmcaddon  # pylint: disable= import-error
 
 Addon = xbmcaddon.Addon('script.demo')
 
@@ -13,13 +14,13 @@ __path__ = Addon.getAddonInfo('path')
 getLocalizedString = Addon.getLocalizedString
 getSetting = Addon.getSetting
 
-print '[SCRIPT][%s] version %s initialized!' % (__scriptname__, __version__)
+print('[SCRIPT][%s] version %s initialized!' % (__scriptname__, __version__))
 
-if (__name__ == "__main__"):
+if __name__ == "__main__":
     import resources.lib.demo as demo
     ui = demo.GUI('script-%s-main.xml' % __scriptname__, __path__, 'default')
     ui.doModal()
-    print '[SCRIPT][%s] version %s exited!' % (__scriptname__, __version__)
+    print('[SCRIPT][%s] version %s exited!' % (__scriptname__, __version__))
     del ui
 
 sys.modules.clear()
