@@ -4,5 +4,5 @@ Demo "Hello World"-Script for XBMC
 Addon for learning purposes regarding creating custom windows in kodi.
 
 Tested on:
-Leia 18.x
-Matrix 19.x
+KODI 18.x Leia
+KODI 19.x Matrix
