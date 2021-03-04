@@ -7,7 +7,7 @@ import xbmc  # pylint: disable=import-error
 getLocalizedString = sys.modules['__main__'].getLocalizedString
 
 BUTTON_MAP = {
-    "update": ["Upate Library", 10],
+    "update": ["Update Library", 10],
     "clear": ["Clear Library", 20],
     "exit": ["Exit", 30]
 }
@@ -18,13 +18,12 @@ class GUI(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
         xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
 
-        self.update = self.getControl(BUTTON_MAP["update"][1])
-        self.clean = self.getControl(BUTTON_MAP["clear"][1])
-        self.exit = self.getControl(BUTTON_MAP["exit"][1])
 
     def onInit(self):  # pylint: disable=invalid-name
         ''' Init methods '''
-
+        self.update = self.getControl(BUTTON_MAP["update"][1])
+        self.clean = self.getControl(BUTTON_MAP["clear"][1])
+        self.exit = self.getControl(BUTTON_MAP["exit"][1])
         self.update.setLabel(BUTTON_MAP["update"][0])
         self.clean.setLabel(BUTTON_MAP["clear"][0])
         self.exit.setLabel(BUTTON_MAP["exit"][0])
